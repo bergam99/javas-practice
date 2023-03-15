@@ -1,0 +1,6 @@
+#Thu Jan 26 16:45:12 CET 2023
+expression=.m2\\repository
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.sdk.Eclipse.master=true
+__DEFAULT__=false

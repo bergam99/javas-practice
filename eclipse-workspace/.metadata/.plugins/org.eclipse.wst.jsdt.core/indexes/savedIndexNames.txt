@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+/Users/bergam/Desktop/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+458326057.index
+1667936366.index
+1303903523.index
+1296953834.index
+2198459259.index
+3894080679.index
+3825848528.index
+902055559.index

@@ -1,0 +1,30 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mysql.cj.xdevapi.Statement;
+
+public class UserAcces {
+	public static void main(String[]args) throws SQLException, ClassNotFoundException  {
+		
+		
+		ConfigDataBase.init();
+		Connection conn = DriverManager.getConnection(url, login, pass);
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(req);
+		
+		
+		while(rs.next()) {
+			System.out.println(rs.getInt("idUser")+ " / " + rs.getString("Login") + " / " +
+			rs.getString("Password"));
+		}
+		
+		conn.close();
+		stmt.close();
+		rs.close();
+		
+	}
+}

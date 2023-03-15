@@ -1,0 +1,25 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+public class UserAcces {
+	public static void main(String[]args) throws SQLException, ClassNotFoundException  {
+		
+		String driver = "com.mysql.cj.jdbc.Driver";
+		String login = "user-app";
+		String pass = "nicolas";
+		String url = "jdbc:musql://localhost:3306/myDB";
+		
+		Class.forName(driver);
+		Connection conn = DriverManager.getConnection(url, login, pass);
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery(req);
+		
+		
+		while(rs.next()) {
+			System.out.println();
+		}
+	}
+}

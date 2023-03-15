@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+/Users/bergam/Desktop/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2895182647.index
+/connect-1/src/main/java
+/Users/bergam/Desktop/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2401665073.index
+/Connect/src/main/java
+/Users/bergam/Desktop/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4231184614.index
+/nouveau/src/main/java
+/Users/bergam/Desktop/eclipse-workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1296953834.index
+/Connect/src/main/java

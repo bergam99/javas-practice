@@ -1,0 +1,34 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class UserAcces {
+	public static void loginUser() throws SQLException, ClassNotFoundException  {
+		
+		
+		ConfigDataBase.init();
+		Connection conn = DriverManager.getConnection(ConfigDataBase.url, ConfigDataBase.login, ConfigDataBase.pass);
+		
+		String requete = "select * from User";
+		
+		Statement stmt = conn.createStatement();
+		
+		ResultSet rs = stmt.executeQuery(requete);
+		
+		
+		
+		if(rs.next()) {
+			System.out.println(rs.getInt("idUser")+ " / " + rs.getString("Login") + " / " +
+			rs.getString("Password"));
+		}
+		
+		conn.close();
+		stmt.close();
+		rs.close();
+		
+	}
+}

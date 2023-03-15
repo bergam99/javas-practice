@@ -1,0 +1,56 @@
+package Contreoller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("", "/accueil")
+public class HomeController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+    public HomeController() {
+    	super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("---in Home Controller");
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+		
+	} 
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String login = "";
+		String pass = "";
+		
+		try {
+			login = request.getParameter("txt-login");
+			pass = request.getParameter("txt-pass");
+			System.out.println(login);
+			System.out.println(pass);
+			
+			
+		} catch(Exception e) {
+			System.out.println("pas de data dans le input de la jsp");
+		}
+		
+		User currentUser = null;
+		
+		try {
+			currentUser = UserAcces.ifUserExist(login, pass);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+
+}
